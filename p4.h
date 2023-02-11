@@ -6,9 +6,7 @@
 #define PROGRAM4_P4_H
 
 
-class p4 {
 
-};
 
 
 #endif //PROGRAM4_P4_H
