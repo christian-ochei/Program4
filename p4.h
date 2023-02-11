@@ -7,29 +7,32 @@ class sNode{
   std::string text;
   int h;
   sNode* left, *right;   // left and right children
+
+  friend class sBST;
 };
 
 
 class sBST{
 private: 
-  int treeCount;
-  sNode*root;
-  std::string findMin(sNode *ptr);
-  bool insert(sNode* p); 
-  bool remove(sNode* text);
-  bool isIn();
-  void printIt();
-  void  clear(sNode* p);
+    int treeCount;
+    sNode*root;
+    std::string findMin(sNode *ptr);
+    bool insert(sNode* p);
+    bool remove(sNode* text);
+    bool isIn();
+    void printIt(sNode* node) const;
+    void clear(sNode* node);
+
 public: 
- sBST();
-~sBST(); 
-bool insert(std::string text);
-bool remove(std::string text); 
-bool isIn(std::string text) const; 
-void printIt() const;
-int count() const;
-void clear(); 
- 
+     sBST();
+    ~sBST();
+    bool insert(std::string text);
+    bool remove(std::string text);
+    bool isIn(std::string text) const;
+    void printIt() const;
+    int count() const;
+    void clear();
+
 };
 
 

@@ -12,6 +12,7 @@ sNode::sNode(string text){
     this->text = text;
     left = nullptr;
     right = nullptr;
+    h = 0;
 }
 
 
@@ -36,15 +37,15 @@ sBST::isin(){
 
 }
 
-sBST::printIt(sNode* node){
+void sBST::printIt(sNode* node) const{
     if (node){
         printIt(node->left);
         printIt(node->right);
-        cout <<
+        cout << node->text << endl;
     }
 }
 
-sBST::clear(sNode * node){
+void sBST::clear(sNode * node){
     if (node){
         clear(node->left);
         clear(node->right);
