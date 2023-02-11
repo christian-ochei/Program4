@@ -5,7 +5,6 @@
 #include "p4.h"
 #include <string>
 #include <iostream>
-
 using namespace std;
 
 sNode::sNode(string text){
@@ -16,17 +15,33 @@ sNode::sNode(string text){
 }
 
 
-sBST::findMin(sNode * ptr){
+string sBST::findMin(sNode * ptr){
     string minVal;
     if (ptr->left){
         minVal = findMin(ptr->left);
     }else{
         minVal = ptr->text;
     }
+    return minVal;
 }
 
-sBST::insert(){
-
+bool sBST::insert(string text, sNode*& node){
+    bool retVal = false;
+    if (node){
+        int compare = text.compare(node->text);
+        if (compare > 0){
+            retVal = insert(text,node->right);
+        }else if (compare < 0){
+            retVal = insert(text,node->left);
+        }else{
+            retVal = false;
+        }
+    }else{
+        sNode* newNode = new sNode(text);
+        node = newNode;
+        retVal = true;
+    }
+    return retVal;
 }
 
 sBST::remove(){
@@ -64,7 +79,12 @@ sBST::~sBST(){
 }
 
 bool sBST::insert(string text){
-    treeCount ++;
+    bool couldInsert;
+    couldInsert = insert(text,root);
+    if (couldInsert){
+        treeCount ++;
+    }
+    return couldInsert;
 }
 
 bool sBST::remove(string text){

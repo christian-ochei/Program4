@@ -3,11 +3,11 @@
 #include <string>
 
 class sNode{
-  private: 
+private:
   std::string text;
   int h;
   sNode* left, *right;   // left and right children
-
+  sNode(std::string text = "");
   friend class sBST;
 };
 
@@ -17,7 +17,7 @@ private:
     int treeCount;
     sNode*root;
     std::string findMin(sNode *ptr);
-    bool insert(sNode* p);
+    bool insert(std::string text, sNode*& node);
     bool remove(sNode* text);
     bool isIn();
     void printIt(sNode* node) const;
