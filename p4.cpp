@@ -96,16 +96,21 @@ bool sBST::isin(string text){
 }
 
 void sBST::printIt() const{
+    // Recursively prints node
     printIt(root);
 }
 
 int sBST::count() const{
+    // Returns tree count
     return treeCount;
 }
 
 
 void sBST::clear(){
+    // Recursively clear all nodes in this Tree
     clear(root);
+
+    // Clears the Node and resets variables
     treeCount = 0;
     root = nullptr;
 }
