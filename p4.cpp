@@ -44,11 +44,19 @@ bool sBST::insert(string text, sNode*& node){
     return retVal;
 }
 
-sBST::remove(){
+bool sBST::remove(sNode* p, string text){
+   //check if no node
+    if(p){
+      if(p->right){
+      
+      }
+    
+    
+    }
 
 }
 
-sBST::isin(){
+bool sBST::isin(){
 
 }
 
@@ -92,6 +100,7 @@ bool sBST::remove(string text){
 }
 
 bool sBST::isin(string text){
+    
 
 }
 
