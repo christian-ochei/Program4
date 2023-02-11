@@ -13,8 +13,14 @@ sNode::sNode(string text){
     right = nullptr;
 }
 
-sBST::findMin(sNode * ptr){
 
+sBST::findMin(sNode * ptr){
+    string minVal;
+    if (ptr->left){
+        minVal = findMin(ptr->left);
+    }else{
+        minVal = ptr->text;
+    }
 }
 
 sBST::insert(){
@@ -29,7 +35,11 @@ sBST::isin(){
 
 }
 
-sBST::printIt(){
+sBST::printIt(sNode* node){
+    printIt(node->left);
+    printIt(node->right);
+
+    cout <<
 
 }
 
@@ -43,19 +53,20 @@ sBST::clear(sNode * node){
 
 // Public methods
 sBST::sBST(){
-
+    treeCount = 0;
+    root = nullptr;
 }
 
 sBST::~sBST(){
-
+    clear(root);
 }
 
 bool sBST::insert(string text){
-
+    treeCount ++;
 }
 
 bool sBST::remove(string text){
-
+    treeCount --;
 }
 
 bool sBST::isin(string text){
@@ -63,14 +74,16 @@ bool sBST::isin(string text){
 }
 
 void sBST::printIt() const{
-
+    printIt(root);
 }
 
 int sBST::count() const{
-
+    return treeCount;
 }
 
 
 void sBST::clear(){
     clear(root);
+    treeCount = 0;
+    root = nullptr;
 }
