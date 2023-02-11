@@ -4,6 +4,7 @@
 
 #include "p4.h"
 #include <string>
+#include <iostream>
 
 using namespace std;
 
@@ -36,15 +37,15 @@ sBST::isin(){
 }
 
 sBST::printIt(sNode* node){
-    printIt(node->left);
-    printIt(node->right);
-
-    cout <<
-
+    if (node){
+        printIt(node->left);
+        printIt(node->right);
+        cout <<
+    }
 }
 
 sBST::clear(sNode * node){
-    if (node != nullptr){
+    if (node){
         clear(node->left);
         clear(node->right);
         delete node;
