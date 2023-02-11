@@ -1,12 +1,15 @@
 #ifndef PROGRAM4_P4_H
 #define PROGRAM4_P4_H
-#include<string>
+#include <string>
+
 class sNode{
   private: 
   std::string text;
   int h;
   sNode* left, *right;   // left and right children
 };
+
+
 class sBST{
 private: 
   int treeCount;

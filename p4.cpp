@@ -9,6 +9,8 @@ using namespace std;
 
 sNode::sNode(string text){
     this->text = text;
+    left = nullptr;
+    right = nullptr;
 }
 
 sBST::findMin(sNode * ptr){
@@ -31,8 +33,12 @@ sBST::printIt(){
 
 }
 
-sBST::clear(){
-
+sBST::clear(sNode * node){
+    if (node != nullptr){
+        clear(node->left);
+        clear(node->right);
+        delete node;
+    };
 }
 
 // Public methods
@@ -66,5 +72,5 @@ int sBST::count() const{
 
 
 void sBST::clear(){
-
+    clear(root);
 }
