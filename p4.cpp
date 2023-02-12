@@ -29,9 +29,10 @@ string sBST::findMin(sNode * ptr){
 }
 
 bool sBST::insert(string text, sNode*& node){
-    bool retVal = false;
+    bool retVal;
     if (node){
         int compare = text.compare(node->text);
+//        cout << compare << " Compare val " << text << " " << node->text << endl;
         if (compare > 0){
             // insert at right
             retVal = insert(text,node->right);
@@ -51,31 +52,31 @@ bool sBST::insert(string text, sNode*& node){
     return retVal;
 }
 
-bool sBST::remove(sNode* p, string text){
-   //check if no node
-    if(p){
-      if(p->right){
-      
-      }
-    
-    
-    }
+//bool sBST::remove(sNode* p, string text){
+//   //check if no node
+//    if(p){
+//      if(p->right){
+//
+//      }
+//
+//
+//    }
+//
+//}
 
-}
-
-bool sBST::isin(){
-
-}
+//bool sBST::isin(){
+//
+//}
 
 void sBST::printIt(sNode* node) const{
     if (node){
         // If this node exists, recursively print this node, with its left
         // and right children
         printIt(node->left);
+        cout << node->text << endl;
         printIt(node->right);
 
         // print out this node if its valid
-        cout << node->text << endl;
     }
 }
 
@@ -116,13 +117,13 @@ bool sBST::insert(string text){
 }
 
 bool sBST::remove(string text){
-    treeCount --;
+    return false;
 }
 
-bool sBST::isin(string text){
-    
-
+bool sBST::isIn(string text) const{
+    return false;
 }
+
 
 void sBST::printIt() const{
     // Recursively prints node

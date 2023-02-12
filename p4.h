@@ -18,8 +18,6 @@ private:
     sNode*root;
     std::string findMin(sNode *ptr);
     bool insert(std::string text, sNode*& node);
-    bool remove(sNode* text);
-    bool isIn();
     void printIt(sNode* node) const;
     void clear(sNode* node);
 
@@ -35,5 +33,4 @@ public:
 
 };
 
-
-
+#endif
