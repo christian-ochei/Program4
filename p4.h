@@ -2,7 +2,6 @@
 // Project: Program 4
 // author: Christian Ochei and Habtamu Wario
 
-
 #ifndef PROGRAM4_P4_H
 #define PROGRAM4_P4_H
 #include <string>
@@ -37,5 +36,4 @@ public:
     void clear(); // empty the tree
 };
 
-
-
+#endif // PROGRAM4_P4_H
