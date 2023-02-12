@@ -7,6 +7,7 @@
 #include <iostream>
 using namespace std;
 
+// author: Christian Ochei and Habtamu Wario
 sNode::sNode(string text){
     // Initialize this node with default values
     this->text = text;
@@ -14,7 +15,7 @@ sNode::sNode(string text){
     right = nullptr;
     h = 0;
 }
-
+// author: Christian Ochei and Habtamu Wario
 string sBST::findMin(sNode * ptr){
     string minVal;
     // If this node has a left then, minimum has not been reached
@@ -27,7 +28,7 @@ string sBST::findMin(sNode * ptr){
     }
     return minVal;
 }
-
+// author: Christian Ochei
 bool sBST::insert(string text, sNode*& node){
     bool retVal;
     if (node){
@@ -50,7 +51,7 @@ bool sBST::insert(string text, sNode*& node){
     }
     return retVal;
 }
-
+// author: Christian Ochei and Habtamu Wario
 void sBST::printIt(sNode* node) const{
     if (node){
         // If this node exists, recursively print this node, with its left
@@ -61,7 +62,7 @@ void sBST::printIt(sNode* node) const{
         printIt(node->right);
     }
 }
-
+// author: Christian Ochei and Habtamu Wario
 void sBST::clear(sNode * node){
     // If this node exists, recursively destroy this node, together with
     // its left and right children
@@ -72,19 +73,19 @@ void sBST::clear(sNode * node){
         delete node;
     };
 }
-
+// author: Christian Ochei and Habtamu Wario
 // Public methods
 sBST::sBST(){
     // Initialize tree with zero items
     treeCount = 0;
     root = nullptr;
 }
-
+// author: Christian Ochei and Habtamu Wario
 sBST::~sBST(){
     // Recursively destroy all nodes
     clear(root);
 }
-
+// author: Christian Ochei
 bool sBST::insert(string text){
     bool couldInsert;
 
@@ -97,27 +98,27 @@ bool sBST::insert(string text){
     }
     return couldInsert;
 }
-
+// author: Christian Ochei and Habtamu Wario
 bool sBST::remove(string text){
     return false;
 }
-
+// author: Christian Ochei and Habtamu Wario
 bool sBST::isIn(string text) const{
     return false;
 }
 
-
+// author: Christian Ochei and Habtamu Wario
 void sBST::printIt() const{
     // Recursively prints node
     printIt(root);
 }
-
+// author: Christian Ochei and Habtamu Wario
 int sBST::count() const{
     // Returns tree count
     return treeCount;
 }
 
-
+// author: Christian Ochei
 void sBST::clear(){
     // Recursively clear all nodes in this Tree
     clear(root);
