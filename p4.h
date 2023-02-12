@@ -6,6 +6,8 @@
 #ifndef PROGRAM4_P4_H
 #define PROGRAM4_P4_H
 #include <string>
+
+
 class sNode{
 private:
   std::string text;
