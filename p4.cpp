@@ -52,19 +52,11 @@ bool sBST::insert(string text, sNode*& node){
 }
 
 bool sBST::remove(sNode* p, string text){
-   //check if no node
-    if(p){
-      if(p->right){
-      
-      }
-    
-    
-    }
-
+   return false;
 }
 
 bool sBST::isin(){
-
+   return false;
 }
 
 void sBST::printIt(sNode* node) const{
@@ -72,10 +64,11 @@ void sBST::printIt(sNode* node) const{
         // If this node exists, recursively print this node, with its left
         // and right children
         printIt(node->left);
+         // print out this node if its valid
+        cout << node->text << endl;
         printIt(node->right);
 
-        // print out this node if its valid
-        cout << node->text << endl;
+       
     }
 }
 
@@ -120,7 +113,7 @@ bool sBST::remove(string text){
 }
 
 bool sBST::isin(string text){
-    
+    return false;
 }
 
 void sBST::printIt() const{
