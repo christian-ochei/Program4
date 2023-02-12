@@ -18,39 +18,21 @@ private:
 class sBST{
 private:
     int treeCount; // count the total number of tree
-    // points to the tree
     sNode*root;
-    // find the minimum node function;
-    std::string findMin(sNode *ptr);
-    // call the insert node text function
+    std::string findMin(sNode *ptr); // find the minimum node function
     bool insert(std::string text, sNode*& node);
-    // remove fuction to remove the text
-    bool remove(sNode* text, string text);
-    // returns true if the node with text value is in the tree.
-    bool isIn();
-    // print the function
     void printIt(sNode* node) const;
-    // clear the function
     void clear(sNode* node);
 
-
 public: 
-    // constructor
      sBST();
-    // destructor
     ~sBST();
-    // call insert function
     bool insert(std::string text);
-    // call remove function
     bool remove(std::string text);
-    // call isIn function
     bool isIn(std::string text) const;
-    // call print It function
-    void printIt() const;
-    // count the number of the nodes in a tree
-    int count() const;
-    // empty the tree;
-    void clear();
+    void printIt() const; // print out every node in tree, in ascending order
+    int count() const; // count the number of the nodes in a tree
+    void clear(); // empty the tree
 };
 
 
