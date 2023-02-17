@@ -55,6 +55,7 @@ bool sBST::insert(string text, sNode*& node){
     return retVal;
 }
 
+//Author habtamu heyi
 bool sBST::remove(sNode* p, string text) {
     bool rc = false;
     if (p) {
@@ -95,6 +96,7 @@ bool sBST::remove(sNode* p, string text) {
     }
     return rc;
 }
+//Author; habtamu heyi
 bool sBST::isIn(sNode* p, string text)  {
     // If the node is null, then the text is not in the tree
     if (!p) {
